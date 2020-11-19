@@ -198,7 +198,7 @@ $ git push -u origin master
 
 Idemo vježbati `add`, `commit` i `push` naredbe. Lokalno u web/ direktoriju izradite README.md datoteku u koju ćete unijeti 6 odlomaka teksta prezuetih s Lorem Ipsum generatora teksta. U oblikovanju teksta koristite Markdown oznake (h1, h2, h3, slika, URL, numerirani popisi, nenumerirani popisi, i sl. 
 
-Dodajte, postavite i pošaljite README.md datoteku u vaš online GitHub repozitorij. Poveznicu do README.md datoteke unesite u moj repozitorij dostupan na adresi: https://github.com/fpehar/ATP2021. Otvorite direktorij studenti i u datoteku studenti.md upište URL adresu vašeg online repozitorija.
+Dodajte, postavite i pošaljite README.md datoteku u vaš online GitHub repozitorij. Poveznicu do README.md datoteke unesite u moj repozitorij dostupan na adresi: https://github.com/fpehar/ATP2021. Otvorite direktorij studenti i u datoteku studenti.md upište URL adresu vašeg online repozitorija koristeći "Edit this file" opciju. 
 
 # Popis i opis osnovnih Git naredbi
 
