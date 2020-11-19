@@ -194,7 +194,13 @@ $ git remote add origin https://github.com/fpehar/web.git
 $ git push -u origin master
 ```
 
-## Popis i opis osnovnih Git naredbi
+## Dodavanje README.md datoteke
+
+Idemo vježbati `add`, `commit` i `push` naredbe. Lokalno u web/ direktoriju izradite README.md datoteku u koju ćete unijeti 6 odlomaka teksta prezuetih s Lorem Ipsum generatora teksta. U oblikovanju teksta koristite Markdown oznake (h1, h2, h3, slika, URL, numerirani popisi, nenumerirani popisi, i sl. 
+
+Dodajte, postavite i pošaljite README.md datoteku u vaš online GitHub repozitorij. Poveznicu do README.md datoteke unesite u moj repozitorij 
+
+# Popis i opis osnovnih Git naredbi
 
 **git init**
 
