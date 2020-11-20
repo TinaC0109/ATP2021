@@ -8,7 +8,9 @@ Skripta se razvija u razdoblju od listopada 2020. do siječnja 2021. godine za s
 - Stručni studij informacijskih tehnologija Sveučilišta u Zadru
 - Preddiplomski studij, 3 ECTS-a
 
-# 1. Radno okružje i tehnički preduvjeti
+# Sadržaj
+
+## 1. Radno okružje i tehnički preduvjeti
 
 - Postavljanje radno okružja
 - Merlin (Moodle) i MS Teams
