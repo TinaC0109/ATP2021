@@ -1,0 +1,25 @@
+= AsciiDoc probni članak
+Franjo Pehar <fpehar@unizd.hr>
+1.0, 3.12.2020, Predložak AsciiDoc članka
+:toc:
+
+== Uvod
+
+Riječ je o uvodnom odlomku u kojem demonstriramo mogućnost formatiranja teksta. Ovo je *bold*, ovo je _kurziv_.
+
+== Tema susreta: AsciiDoc
+
+U AsciiDocu mogu se jednostavno ubaciti slike.
+
+.Github
+image::../img/github.png[Github Mark,width=40%]
+
+== (Ne)numerirani popisi
+
+.Popis stavki
+* Stavka 1
+** Stavka 1.1
+** Stavka 1.2
+* Stavka 2
+
+Ovo je nastavak priče. Novi odlomak.

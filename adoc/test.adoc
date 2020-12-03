@@ -1,5 +1,6 @@
 = Prvi primjer Asciidoc datoteke: Podnaslov                              
-Franjo Pehar (c) 2020 Heuristico
+:author:Franjo Pehar
+:email:fpehar@unizd.hr
 Version 0.3, 1.12.202                                             
 :sectnums:                                                          
 :toc: right                                                               
@@ -10,7 +11,8 @@ Version 0.3, 1.12.202
 :keywords: AsciiDoc                                                 
 :imagesdir: ./img                                                   
 
-Ovo je opcionalna preambula (neimenovana body sekcija). Korisna je za pisanje dokumenata koji ne sadrže sekcije već se sve nalazi u preambuli. 
+Ovo je opcionalna preambula (neimenovana body sekcija). Korisna je za pisanje 
++ dokumenata koji ne sadrže sekcije već se sve nalazi u preambuli. 
 Ovo je treća rečenica unutar prvog odlomka.
 
 Novi odlomak je dodan i prikazuje se jednim prijelom novog retka (u novom retku).

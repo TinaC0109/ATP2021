@@ -1,0 +1,439 @@
+<!DOCTYPE html><html><head>
+      <title>git</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:////Users/fbox0920/.vscode/extensions/shd101wyy.markdown-preview-enhanced-0.5.13/node_modules/@shd101wyy/mume/dependencies/katex/katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="uvod-u-git-repozitorije">Uvod u Git repozitorije</h1>
+
+<h2 class="mume-header" id="%C5%A1to-je-git">&#x160;to je Git?</h2>
+
+<p>Kontrola verzija se koristi kod odr&#x17E;avanja ve&#x107;eg broja razli&#x10D;itih verzija izvornoga koda. Ovaj pristup omogu&#x107;ava pra&#x107;enja promjena u kodu tijekom du&#x17E;eg vremenskog perioda. Kontrola verzija osim navedenog omogu&#x107;va suradnju me&#x111;u ve&#x107;im brojem osoba koje se mogu nalaziti na razli&#x10D;itim lokacijama, te slanje izvornog koda s lokalnog ure&#x111;aja na testni, a potom i na produkcijski server.</p>
+<h2 class="mume-header" id="git-omogu%C4%87ava-sljede%C4%87e">Git omogu&#x107;ava sljede&#x107;e:</h2>
+
+<ul>
+<li>pra&#x107;enje promjena u kodu</li>
+<li>sinkronizaciju koda me&#x111;u razli&#x10D;itim korisnicima</li>
+<li>testiranje promjena u kodu bez gubitka originala</li>
+<li>vra&#x107;anje starijih verzija koda</li>
+</ul>
+<h2 class="mume-header" id="instalacija-git-a">Instalacija Git-a</h2>
+
+<p>Prvo provjerite na svom ra&#x10D;unalu da li je Git ve&#x107; instaliran &#x2013; command line na Windowsima ili terminal na Mac/Linuxu.</p>
+<pre data-role="codeBlock" data-info class="language-"><code>git --version
+git version 2.29.2
+</code></pre><p>Ako Git nije instaliran, otvorite <a href="https://git-scm.com/downloads/">Git-SCM</a> i preuzmite izvr&#x161;nu datoteku za instalaciju sustava na va&#x161;e ra&#x10D;unalo.</p>
+<h2 class="mume-header" id="pokretanje-git-a">Pokretanje Git-a</h2>
+
+<p>Instalacijom Git-a mogu&#x107;e je svaki direktorij na lokalnom ra&#x10D;unalu pretvoriti u tzv. repozitorij pomo&#x107;u kojeg je mogu&#x107;e pratiti promjene u projektu.</p>
+<p>Nakon uspje&#x161;ne instalacije Git-a provjerite pomo&#x107;u <code>which</code> naredbe da li je izvr&#x161;ni program uspje&#x161;no instaliran.</p>
+<pre data-role="codeBlock" data-info class="language-"><code>$ which git
+
+/usr/local/bin/git
+</code></pre><p>Nakon toga potrebno je postaviti <em>globalne</em> postavke (jednokratno na svakom ra&#x10D;unalu).</p>
+<pre data-role="codeBlock" data-info class="language-"><code>$ git config --global user.name &quot;Va&#x161;e ime&quot;
+
+$ git config --global user.email vas.email@primjer.com
+</code></pre><p>Ove postavke su vrlo bitne ako sura&#x111;ujete s nekim na projektu.</p>
+<h3 class="mume-header" id="vje%C5%BEbe">Vje&#x17E;be</h3>
+
+<ol>
+<li>U CLI-u pokrenite <code>git help</code> naredbu. Koja naredba je prva navedena?</li>
+<li>Ako vam je <code>git help</code> naredba izbacila previ&#x161;e sadr&#x17E;aja, sugeriram prebacivanje <em>outputa</em> u <code>less</code> naredbu. Podsje&#x107;am da se za pipe opciju koristi simbol <code>|</code>.</li>
+<li>Git pohranjuje globalne postavke u skrivenu datoteku koja se nalazi u va&#x161;em home direktoriju. Provjerite sadr&#x17E;aj <code>~/.gitconfig</code> datoteke pomo&#x107;u neke od naredbe (<code>cat</code>, <code>less</code>) ili u nekom ure&#x111;iva&#x10D;u teksta (npr. nano, Notepad++, VSC, Atom, ...)-.</li>
+</ol>
+<h2 class="mume-header" id="inicijalizacija-repozitorija">Inicijalizacija repozitorija</h2>
+
+<p>Na nekom mjestu otvorite direktorij <code>Repos</code>, a u sljede&#x107;em koraku &#x107;emo otvoriti novi direktorij <code>web</code>.</p>
+<pre data-role="codeBlock" data-info class="language-"><code>$ mkdir -p repos/web
+</code></pre><p>Podsje&#x107;am da <code>mkdir</code> naredba otvara novi direktorij, a argument <code>-p</code> otvara prema potrebi &quot;me&#x111;udirektorije&quot; (u konkretnom slu&#x10D;aju otvara direktorij <code>Repos</code>)</p>
+<p>Locirajte se pomo&#x107;u <code>cd</code> naredbe u novootvoreni direktorij <code>web</code> i izlistajte sadr&#x17E;aj direktorija.</p>
+<pre data-role="codeBlock" data-info class="language-"><code>$ cd Repos/web
+$ ls
+</code></pre><p>Direktorij je, naravno, potpuno prazan!</p>
+<p>Spremni smo za inicijalizacija novog repozitorija unutar web direktorija. Sve naredbe zapo&#x10D;inju s <code>git</code> nakon &#x10D;ega slijedi naziv sljede&#x107;eg koraka (npr. lokalni repozitorij otvaramo pomo&#x107;u <code>init</code>).</p>
+<pre data-role="codeBlock" data-info class="language-"><code>$ git init
+Initialized empty Git repository in /Users/fbox0920/Repos/web/.git/
+$ web git:(master) 
+</code></pre><p>Dobili smo nekoliko povratnih informacija, a izme&#x111;u ostalog naziv zadane Git grane (eng. <em>branch</em>) koja se u ovom slu&#x10D;aju naziva <code>master</code>. Uskoro &#x107;emo vi&#x161;e saznati o granama i grananju.</p>
+<h3 class="mume-header" id="vje%C5%BEba">Vje&#x17E;ba</h3>
+
+<ol>
+<li>Pokrenite naredbu <code>ls -a</code> (discussedza ispis svih datoteka i direktorija u novootvorenom lokalnom repozitoriju. Kako glasi naziv skrivene datoteke koja je izra&#x111;ena kod pokretanja repozitorija?</li>
+<li>Otvorite skriveni direktorij i pomo&#x107;u <code>cat</code> naredbe istra&#x17E;ite i na zaslonu prika&#x17E;ite konfiguracijske postavke.</li>
+</ol>
+<h2 class="mume-header" id="prvi-commit">Prvi commit</h2>
+
+<p>Prazan repozitorij nema smisla, pa &#x107;emo izraditi jednu jednostavnu web stranicu koju &#x107;emo prema konvenciji imenovati <code>index.html</code>. Novu web stranicu mo&#x17E;emo izraditi na nekoliko na&#x10D;ina. Mo&#x17E;ete li navesti kako?</p>
+<pre data-role="codeBlock" data-info class="language-"><code>$ touch index.html
+</code></pre><p>Nakon &#x161;to smo izradili prvu datoteku mo&#x17E;emo koristiti <code>git status</code> naredbu.</p>
+<pre data-role="codeBlock" data-info class="language-"><code>$ touch index.html
+
+On branch master
+No commits yet
+
+Untracked files:
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+	index.html
+
+nothing added to commit but untracked files present (use &quot;git add&quot; to track)
+</code></pre><p>Iz poruke je razvidno da se <code>index.html</code> datoteka trenutno ne prati (engl. untracked), tj. da Git jo&#x161; uvijek ne zna za njezino postojanje. Stoga &#x107;emo ju dodati pomo&#x107;u <code>git add</code> naredbe.</p>
+<pre data-role="codeBlock" data-info class="language-"><code>$ git add index.html
+</code></pre><p>ako &#x17E;elimo dodati samo jednu konkretnu datoteku ili</p>
+<pre data-role="codeBlock" data-info class="language-"><code>$ git add -A
+</code></pre><p><code>-A</code> za dodavanje svih (ALL) datoteka koje Git trenutno ne prati (umjesto <code>-A</code> mo&#x17E;emo koristiti i <code>git add .</code> kako bismo u sustav pra&#x107;enja dodali sve datoteke iz trenutnog radnog direktorija).</p>
+<p>Provjerite rezultat <code>git add -A</code> naredbe tako da unesete <code>git status</code>.</p>
+<pre data-role="codeBlock" data-info class="language-"><code>$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use &quot;git rm --cached &lt;file&gt;...&quot; to unstage)
+	new file:   index.html
+</code></pre><p>Pojam &#x201C;unstage&#x201D; implicira da je datoteka promaknuta iz statusa &quot;untracked&quot; u status &quot;staged&quot; &#x161;to zna&#x10D;i da je datoteka spremna za dodavanje u repozitorij. Untracked/Unstaged i Staged su dva od ukupno &#x10D;etiri Git statusa.</p>
+<p><img src="img/slika1.png" alt="Git status"></p>
+<p>Nakon &#x161;to smo dodali promjene u tzv. &quot;staging&quot; podru&#x10D;je mo&#x17E;emo sve postaviti kao dio repozitorija kori&#x161;tenjem <code>git commit</code> naredbe koja se naj&#x10D;e&#x161;&#x107;e koristi s opcijom <code>-m</code> koja uklju&#x10D;uje poruku s opisom svrhe ili promjene.</p>
+<pre data-role="codeBlock" data-info class="language-"><code>$ git commit -m &quot;pokretanje repozitorija&quot;
+[master (root-commit) c08900b] pokretanje repozitorija
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 img/slika1.png
+ create mode 100644 index.html
+</code></pre><p>Rezultat <code>commit</code> naredbe mo&#x17E;ete provjeriti u <code>git log</code> zapisu:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>commit c08900bc25ce820dbd1af014afc5d798c2eea1b9 (HEAD -&gt; master)
+Author: fpehar &lt;fpehar@unizd.hr&gt;
+Date:   Thu Nov 19 13:58:59 2020 +0100
+
+    pokretanje repozitorija
+</code></pre><p>Svaki <code>commit</code> se identificira pomo&#x107;u hash-a &#x2013; jedinstvenog niza alfanumeri&#x10D;kih znakova. <code>Hash</code> se &#x10D;esto naziva i <code>&quot;SHA&quot;</code> (izgovara se shah; <em>Secure Hash Algoritham</em>).</p>
+<h3 class="mume-header" id="vje%C5%BEba-1">Vje&#x17E;ba</h3>
+
+<ol>
+<li>Koriste&#x107;i touch naredbu izredite u svojm repozitoriju prazne datoteke koje &#x107;ete nazvati <code>foo</code> i <code>bar</code>.</li>
+<li>Koriste&#x107;i <code>git add foo</code> dodajte <code>foo</code> u tzv. staging podru&#x10D;je. Pomo&#x107;u <code>git status</code> provjerite rezultat.</li>
+<li>Koriste&#x107;i <code>git commit -m</code> dodajte poruku i dodajte <code>foo</code> u repozitorij.</li>
+<li>Koriste&#x107;i <code>git add bar</code> dodajte <code>bar</code> u staging podru&#x10D;je. Potvrdite rezultat s <code>git status</code> naredbom.</li>
+<li>Sad pokrenite <code>git commit</code> bez <code>-m</code> opcije. Koriste&#x107;i <code>vi</code> ure&#x111;iva&#x10D; teksta dodajte poruku &quot;dodan bar&quot;, pohranite i iza&#x111;ite iz aplikacije.</li>
+<li>Pomo&#x107;u <code>git log</code> potvrdite uspje&#x161;nost prethodnih koraka.</li>
+</ol>
+<h2 class="mume-header" id="diff-prikaz">Diff prikaz</h2>
+
+<p>Koriste&#x107;i <code>echo</code> naredbu dodajte tekst &quot;hello, world&quot; <code>index.html</code> datoteci.</p>
+<pre data-role="codeBlock" data-info class="language-"><code>echo &quot;hello, world&quot; &gt; index.html 
+</code></pre><p>Pomo&#x107;u unix naredbe <code>diff</code> provjerite razliku izme&#x111;u <code>foo</code> i <code>bar</code>.</p>
+<h2 class="mume-header" id="dodavanje-html-oznaka">Dodavanje HTML oznaka</h2>
+
+<h2 class="mume-header" id="dodavanje-html-strukture">Dodavanje HTML strukture</h2>
+
+<h2 class="mume-header" id="sa%C5%BEetak">Sa&#x17E;etak</h2>
+
+<h1 class="mume-header" id="pohrana-i-dijeljenje">Pohrana i dijeljenje</h1>
+
+<h2 class="mume-header" id="github-udaljeni-repozitorij">GitHub: udaljeni repozitorij</h2>
+
+<p>GitHub je mre&#x17E;no sjedi&#x161;te koje omogu&#x107;ava pohranu Git repozitorija na internetu. Git omogu&#x107;ava upravljanje privatnim i javnim repozitorijima koji se mogu dijeliti s drugih korisnicima.</p>
+<p>GitHub Pro je besplatan za sve studente, te nudi brojne dodatne pogodnosti. Studentski ra&#x10D;un mo&#x17E;ete otvoriti na sljede&#x107;oj adresi:<br>
+<a href="https://education.github.com/students">https://education.github.com/students</a><br>
+ili<br>
+<a href="https://education.github.com/discount_requests/student_application">https://education.github.com/discount_requests/student_application</a></p>
+<p>Studentski ra&#x10D;un vam, Izme&#x111;u ostalog, omogu&#x107;ava neograni&#x10D;enu objavu privatnih repozitorija koji nisu dostupni neautoriziranim korisnicima.</p>
+<h2 class="mume-header" id="otvaranje-novog-repozitorija">Otvaranje novog repozitorija</h2>
+
+<ul>
+<li>Otvorite <a href="https://github.com/">github</a></li>
+<li>Logirajte se u svoj ra&#x10D;un</li>
+<li>Odaberite gum <a href="https://github.com/new">novi repozitorij</a> &#x2013; otvorit &#x107;e vam se opcija za inicijalizaciju novog repozitorija s <code>README</code> datotekom, ali ovaj put mo&#x17E;ete presko&#x10D;iti izradu navedene datoteke.</li>
+<li>Odaberite gumb <code>Create repository</code></li>
+</ul>
+<h2 class="mume-header" id="udaljeni-repozitorij">Udaljeni repozitorij</h2>
+
+<p>Izradite novi online repozitorij kako biste mogli poslati (push) sadr&#x17E;aj iz lokalnog repozitorija na Github.</p>
+<pre data-role="codeBlock" data-info class="language-"><code>$ git remote add origin https://github.com/fpehar/web.git
+$ git push -u origin master
+</code></pre><h2 class="mume-header" id="dodavanje-readmemd-datoteke">Dodavanje <a href="http://README.md">README.md</a> datoteke</h2>
+
+<p>Idemo vje&#x17E;bati <code>add</code>, <code>commit</code> i <code>push</code> naredbe. Lokalno u web/ direktoriju izradite <a href="http://README.md">README.md</a> datoteku u koju &#x107;ete unijeti 6 odlomaka teksta prezuetih s Lorem Ipsum generatora teksta. U oblikovanju teksta koristite Markdown oznake (h1, h2, h3, slika, URL, numerirani popisi, nenumerirani popisi, i sl.</p>
+<p>Dodajte, postavite i po&#x161;aljite <a href="http://README.md">README.md</a> datoteku u va&#x161; online GitHub repozitorij. Poveznicu do <a href="http://README.md">README.md</a> datoteke unesite u moj repozitorij dostupan na adresi: <a href="https://github.com/fpehar/ATP2021">https://github.com/fpehar/ATP2021</a>. Otvorite direktorij studenti i u datoteku <a href="http://studenti.md">studenti.md</a> upi&#x161;te URL adresu va&#x161;eg online repozitorija koriste&#x107;i &quot;Edit this file&quot; opciju.</p>
+<h1 class="mume-header" id="popis-i-opis-osnovnih-git-naredbi">Popis i opis osnovnih Git naredbi</h1>
+
+<p><strong>git init</strong></p>
+<blockquote>
+<p>Zamislite da ste od kolege primili mail s nekim bitnim podacima, dokumentima ili kodom. Sve &#x161;to trebate u tom trenutku u&#x10D;initi jest sljede&#x107;e:</p>
+<ol>
+<li>otvorite na lokalnom ra&#x10D;unalu novi direktorij (npr. <code>mkdir test</code>)</li>
+<li>pozicionirajte se u navedeni direktorij (npr. <code>cd test</code>)</li>
+<li>unesite naredbu <code>git init</code></li>
+<li>unesite kod ili izradite novu datoteku (npr. <code>nano README.md</code>)</li>
+</ol>
+</blockquote>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
