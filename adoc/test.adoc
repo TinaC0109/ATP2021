@@ -2,7 +2,7 @@
 Franjo Pehar (c) 2020 Heuristico
 Version 0.3, 1.12.202                                             
 :sectnums:                                                          
-:toc:                                                               
+:toc: right                                                               
 :toclevels: 4                                                       
 :toc-title: Kazalo sadržaja                                              
                                                                     
