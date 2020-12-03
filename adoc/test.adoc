@@ -13,6 +13,8 @@ Version 0.3, 1.12.202
 Ovo je opcionalna preambula (neimenovana body sekcija). Korisna je za pisanje dokumenata koji ne sadrže sekcije već se sve nalazi u preambuli. 
 Ovo je treća rečenica unutar prvog odlomka.
 
+Novi odlomak je dodan i prikazuje se jednim prijelom novog retka (u novom retku).
+
 == Prva sekcija
 
 Neki tekst
