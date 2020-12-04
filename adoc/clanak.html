@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.12">
 <meta name="author" content="Franjo Pehar">
-<title>AsciiDoc probni članak</title>
+<title>AsciiDoc probna knjiga</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -439,36 +439,48 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 @media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
 </style>
 </head>
-<body class="article">
+<body class="book toc2 toc-left">
 <div id="header">
-<h1>AsciiDoc probni članak</h1>
+<h1>AsciiDoc probna knjiga</h1>
 <div class="details">
 <span id="author" class="author">Franjo Pehar</span><br>
 <span id="email" class="email"><a href="mailto:fpehar@unizd.hr">fpehar@unizd.hr</a></span><br>
 <span id="revnumber">version 1.0,</span>
-<span id="revdate">3.12.2020, Predložak AsciiDoc članka</span>
+<span id="revdate">3.12.2020, Predložak AsciiDoc knjige</span>
 </div>
-<div id="toc" class="toc">
+<div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_uvod">Uvod</a></li>
-<li><a href="#_tema_susreta_asciidoc">Tema susreta: AsciiDoc</a></li>
-<li><a href="#_nenumerirani_popisi">(Ne)numerirani popisi</a></li>
+<li><a href="#_uvod">1. Uvod</a>
+<ul class="sectlevel2">
+<li><a href="#_tema_susreta_asciidoc">1.1. Tema susreta: AsciiDoc</a></li>
+<li><a href="#_nenumerirani_popisi">1.2. (Ne)numerirani popisi</a></li>
+</ul>
+</li>
+<li><a href="#_hello_asciidoc">Hello, AsciiDoc!</a>
+<ul class="sectlevel1">
+<li><a href="#_first_section">2. First Section</a></li>
+<li><a href="#_uvezena_sekcija">3. Uvezena sekcija</a></li>
+</ul>
+</li>
+<li><a href="#_prvi_primjer_asciidoc_datoteke_podnaslov">Prvi primjer Asciidoc datoteke: Podnaslov</a>
+<ul class="sectlevel1">
+<li><a href="#_prva_sekcija">4. Prva sekcija</a></li>
+<li><a href="#_druga_sekcija">5. Druga sekcija</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_uvod">Uvod</h2>
+<h2 id="_uvod">1. Uvod</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Riječ je o uvodnom odlomku u kojem demonstriramo mogućnost formatiranja teksta. Ovo je <strong>bold</strong>, ovo je <em>kurziv</em>.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_tema_susreta_asciidoc">Tema susreta: AsciiDoc</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_tema_susreta_asciidoc">1.1. Tema susreta: AsciiDoc</h3>
 <div class="paragraph">
 <p>U AsciiDocu mogu se jednostavno ubaciti slike.</p>
 </div>
@@ -479,10 +491,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="title">Figure 1. Github</div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_nenumerirani_popisi">(Ne)numerirani popisi</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_nenumerirani_popisi">1.2. (Ne)numerirani popisi</h3>
 <div class="ulist">
 <div class="title">Popis stavki</div>
 <ul>
@@ -507,13 +517,142 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="paragraph">
 <p>Ovo je nastavak priče. Novi odlomak.</p>
 </div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. with asciidoc elements</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Keyboard shortcut</th>
+<th class="tableblock halign-left valign-top">List</th>
+<th class="tableblock halign-left valign-top">Note</th>
+<th class="tableblock halign-left valign-top">Button</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">kbd:[Ctrl+9]</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Test 1</p>
+</li>
+<li>
+<p>Test 2</p>
+</li>
+<li>
+<p>Test 3</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This is a good idea</p>
+</div>
+</td>
+</tr>
+</table>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">btn:[OK]</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>kbd:[Alt+F11] - Toggle Full Screen Mode in the Eclipse IDE</p>
+</div>
+</div>
+</div>
+</div>
+<h1 id="_hello_asciidoc" class="sect0">Hello, AsciiDoc!</h1>
+<div class="openblock partintro">
+<div class="content">
+<div class="paragraph">
+<p>Doc Writer &lt;<a href="mailto:doc@example.com">doc@example.com</a>&gt;</p>
+</div>
+<div class="paragraph">
+<p>An introduction to <a href="http://asciidoc.org">AsciiDoc</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_first_section">2. First Section</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>item 1</p>
+</li>
+<li>
+<p>item 2</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-ruby" data-lang="ruby">puts "Hello, World!"</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_uvezena_sekcija">3. Uvezena sekcija</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<h1 id="_prvi_primjer_asciidoc_datoteke_podnaslov" class="sect0">Prvi primjer Asciidoc datoteke: Podnaslov</h1>
+<div class="openblock partintro">
+<div class="content">
+<div class="paragraph">
+<p>:author:Franjo Pehar
+:email:fpehar@unizd.hr
+Version 0.3, 1.12.202
+:sectnums:
+:toc: right
+:toclevels: 4
+:toc-title: Kazalo sadržaja</p>
+</div>
+<div class="paragraph">
+<p>Ovo je opcionalna preambula (neimenovana body sekcija). Korisna je za pisanje
++ dokumenata koji ne sadrže sekcije već se sve nalazi u preambuli.
+Ovo je treća rečenica unutar prvog odlomka.</p>
+</div>
+<div class="paragraph">
+<p>Novi odlomak je dodan i prikazuje se jednim prijelom novog retka (u novom retku).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_prva_sekcija">4. Prva sekcija</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Neki tekst</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_druga_sekcija">5. Druga sekcija</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Više teksta &#8230;&#8203;</p>
+</div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
 Version 1.0<br>
-Last updated 2020-12-03 18:22:45 +0100
+Last updated 2020-12-04 09:06:23 +0100
 </div>
 </div>
 </body>

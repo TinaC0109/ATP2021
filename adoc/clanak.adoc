@@ -1,20 +1,23 @@
-= AsciiDoc probni članak
+= AsciiDoc probna knjiga
 Franjo Pehar <fpehar@unizd.hr>
-1.0, 3.12.2020, Predložak AsciiDoc članka
-:toc:
+1.0, 3.12.2020, Predložak AsciiDoc knjige
+:doctype: book
+:toc: left
+:toclevels: 4
+:sectnums:
 
 == Uvod
 
 Riječ je o uvodnom odlomku u kojem demonstriramo mogućnost formatiranja teksta. Ovo je *bold*, ovo je _kurziv_.
 
-== Tema susreta: AsciiDoc
+=== Tema susreta: AsciiDoc
 
 U AsciiDocu mogu se jednostavno ubaciti slike.
 
 .Github
 image::../img/github.png[Github Mark,width=40%]
 
-== (Ne)numerirani popisi
+=== (Ne)numerirani popisi
 
 .Popis stavki
 * Stavka 1
@@ -23,3 +26,39 @@ image::../img/github.png[Github Mark,width=40%]
 * Stavka 2
 
 Ovo je nastavak priče. Novi odlomak.
+
+.with asciidoc elements
+|===
+|Keyboard shortcut |List |Note |Button
+
+|kbd:[Ctrl+9]
+a|* Test 1
+* Test 2
+* Test 3
+a|
+[NOTE]
+====
+This is a good idea
+====
+|btn:[OK]
+
+|===
+
+kbd:[Alt+F11] - Toggle Full Screen Mode in the Eclipse IDE
+
+= Hello, AsciiDoc!
+Doc Writer <doc@example.com>
+
+An introduction to http://asciidoc.org[AsciiDoc].
+
+== First Section
+
+* item 1
+* item 2
+
+[source,ruby]
+puts "Hello, World!"
+
+== Uvezena sekcija
+
+include::test.adoc[]
